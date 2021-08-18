@@ -1,0 +1,14 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shrouded Shrew <shroudedshrew@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean-yarn-lock": "find . -name 'yarn.lock' -delete",
+    "clean-npm-lock": "find . -name 'package-lock.json' -delete",
+    "clean-node_modules": "find . -name node_modules -type d -exec rm -rf {} \\;",
+    "clean": "yarn clean-node_modules && clean-yarn-lock && clean-npm-lock",
+    "prep": "find . ! -path '*/node_modules/*' -name 'package.json' -execdir yarn \\;"
+  }
+}
